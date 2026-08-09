@@ -31,51 +31,16 @@ body {
 }
 
 /* =========================
-   HEADER
-========================= */
-
-header {
-    background: linear-gradient(135deg, #103d68, #1976b9);
-    color: white;
-    padding: 28px 20px;
-    text-align: center;
-}
-
-.logo {
-    font-size: clamp(28px, 6vw, 42px);
-    font-weight: 800;
-    letter-spacing: 1px;
-}
-
-.subtitle {
-    margin-top: 7px;
-    font-size: clamp(14px, 3vw, 18px);
-    opacity: 0.92;
-}
-
-/* =========================
-   HERO DOWNLOAD (juste sous la bannière)
+   HERO DOWNLOAD (sous le titre)
 ========================= */
 
 .hero-download {
     text-align: center;
-    padding: 22px 20px 30px;
-    background: linear-gradient(135deg, #103d68, #1976b9);
-}
-
-.hero-download .download-btn {
-    background: #ffffff;
-    color: var(--blue-dark);
-    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.25);
-}
-
-.hero-download .download-btn:hover {
-    background: var(--blue-light);
-    color: var(--blue-dark);
+    margin-top: 22px;
 }
 
 .hero-download .download-note {
-    color: rgba(255, 255, 255, 0.85);
+    color: var(--muted);
 }
 
 /* =========================
@@ -316,10 +281,6 @@ footer {
 
 @media (max-width: 600px) {
 
-    header {
-        padding: 22px 15px;
-    }
-
     .hero-download {
         padding: 18px 15px 24px;
     }
@@ -353,51 +314,6 @@ footer {
 
 <body>
 
-<!-- =========================
-     HEADER
-========================= -->
-
-<header>
-    <div class="logo">
-        🚘 CRM
-    </div>
-
-    <div class="subtitle">
-        Code de la Route Madagascar
-    </div>
-</header>
-
-<!-- =========================
-     BOUTON DE TELECHARGEMENT (juste après la bannière)
-========================= -->
-
-<!--
-    IMPORTANT :
-
-    Le fichier APK doit être placé
-    dans le même dossier que index.html.
-
-    Nom du fichier :
-
-    CodeRouteMadagascar.apk
--->
-
-<section class="hero-download">
-
-    <a
-        class="download-btn"
-        href="CodeRouteMadagascar.apk"
-        download
-    >
-        ⬇️ Télécharger l'APK
-    </a>
-
-    <div class="download-note">
-        Téléchargement gratuit • Android
-    </div>
-
-</section>
-
 <main class="container">
 
     <!-- =========================
@@ -415,6 +331,33 @@ footer {
             l'application Android qui vous accompagne pour apprendre,
             réviser et réussir votre code de la route, à votre rythme.
         </p>
+
+        <!--
+            IMPORTANT :
+
+            Le fichier APK doit être placé
+            dans le même dossier que index.html.
+
+            Nom du fichier :
+
+            CodeRouteMadagascar.apk
+        -->
+
+        <section class="hero-download">
+
+            <a
+                class="download-btn"
+                href="CodeRouteMadagascar.apk"
+                download
+            >
+                ⬇️ Télécharger l'APK
+            </a>
+
+            <div class="download-note">
+                Téléchargement gratuit • Android
+            </div>
+
+        </section>
 
 
         <!--
