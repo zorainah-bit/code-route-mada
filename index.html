@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Code de la Route Madagascar</title>
+
+<meta name="description" content="Code de la Route Madagascar - Application Android pour apprendre et réviser le code de la route.">
+
+<style>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --blue: #1769aa;
+    --blue-dark: #0d4775;
+    --blue-light: #eaf4fc;
+    --background: #eef3f9;
+    --text: #172033;
+    --muted: #667085;
+    --white: #ffffff;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--background);
+    color: var(--text);
+    min-height: 100vh;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+header {
+    background: linear-gradient(135deg, #103d68, #1976b9);
+    color: white;
+    padding: 28px 20px;
+    text-align: center;
+}
+
+.logo {
+    font-size: clamp(28px, 6vw, 42px);
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.subtitle {
+    margin-top: 7px;
+    font-size: clamp(14px, 3vw, 18px);
+    opacity: 0.92;
+}
+
+/* =========================
+   CONTAINER
+========================= */
+
+.container {
+    width: min(1050px, 92%);
+    margin: 25px auto 45px;
+}
+
+/* =========================
+   CARD
+========================= */
+
+.card {
+    background: var(--white);
+    border-radius: 20px;
+    padding: clamp(20px, 4vw, 35px);
+    margin-bottom: 22px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.07);
+}
+
+/* =========================
+   INTRO
+========================= */
+
+.intro {
+    text-align: center;
+}
+
+.intro h1 {
+    font-size: clamp(24px, 5vw, 35px);
+    margin-bottom: 14px;
+}
+
+.intro p {
+    max-width: 760px;
+    margin: auto;
+    line-height: 1.7;
+    color: var(--muted);
+    font-size: 16px;
+}
+
+/* =========================
+   PROSPECTUS
+========================= */
+
+.prospectus {
+    margin-top: 25px;
+    text-align: center;
+}
+
+.prospectus img {
+    display: block;
+    width: 100%;
+    max-width: 720px;
+    height: auto;
+    margin: auto;
+    border-radius: 16px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+/* =========================
+   FEATURES
+========================= */
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
+
+.feature {
+    background: #f6f9fc;
+    border: 1px solid #e5ebf2;
+    border-radius: 16px;
+    padding: 22px 17px;
+    text-align: center;
+}
+
+.feature-icon {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.feature h3 {
+    font-size: 17px;
+    margin-bottom: 8px;
+}
+
+.feature p {
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.55;
+}
+
+/* =========================
+   DOWNLOAD
+========================= */
+
+.download {
+    text-align: center;
+    background: linear-gradient(135deg, #ffffff, #f1f8ff);
+}
+
+.download h2 {
+    font-size: clamp(24px, 5vw, 32px);
+    margin-bottom: 10px;
+}
+
+.download p {
+    color: var(--muted);
+    line-height: 1.6;
+    margin-bottom: 18px;
+}
+
+.badge {
+    display: inline-block;
+    padding: 7px 15px;
+    margin-bottom: 20px;
+    border-radius: 30px;
+    background: var(--blue-light);
+    color: var(--blue);
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.download-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+
+    min-width: 260px;
+    padding: 16px 28px;
+
+    border-radius: 13px;
+
+    background: var(--blue);
+    color: white;
+
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: bold;
+
+    box-shadow: 0 7px 18px rgba(23, 105, 170, 0.25);
+
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.download-btn:hover {
+    background: var(--blue-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 22px rgba(23, 105, 170, 0.3);
+}
+
+.download-btn:active {
+    transform: translateY(0);
+}
+
+.download-note {
+    margin-top: 15px;
+    color: #7b8493;
+    font-size: 13px;
+}
+
+/* =========================
+   PREMIUM
+========================= */
+
+.premium {
+    text-align: center;
+}
+
+.premium h2 {
+    font-size: clamp(22px, 4vw, 29px);
+    margin-bottom: 10px;
+}
+
+.premium p {
+    max-width: 700px;
+    margin: auto;
+    color: var(--muted);
+    line-height: 1.6;
+}
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact {
+    text-align: center;
+}
+
+.contact h2 {
+    margin-bottom: 9px;
+}
+
+.contact p {
+    color: var(--muted);
+    line-height: 1.6;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    text-align: center;
+    padding: 22px 15px;
+    color: #7a8494;
+    font-size: 13px;
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 850px) {
+
+    .features {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* =========================
+   SMARTPHONE
+========================= */
+
+@media (max-width: 600px) {
+
+    header {
+        padding: 22px 15px;
+    }
+
+    .container {
+        width: 94%;
+        margin-top: 17px;
+    }
+
+    .card {
+        padding: 20px 17px;
+        border-radius: 16px;
+    }
+
+    .features {
+        grid-template-columns: 1fr;
+    }
+
+    .download-btn {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .prospectus img {
+        border-radius: 12px;
+    }
+}
+</style>
+
+</head>
+
+<body>
+
+<!-- =========================
+     HEADER
+========================= -->
+
+<header>
+
+```
+<div class="logo">
+    🚘 CRM
+</div>
+
+<div class="subtitle">
+    Code de la Route Madagascar
+</div>
+```
+
+</header>
+
+<main class="container">
+
+```
+<!-- =========================
+     PRESENTATION
+========================= -->
+
+<section class="card intro">
+
+    <h1>
+        Apprenez le Code de la Route 🇲🇬
+    </h1>
+
+    <p>
+        Découvrez <strong>Code de la Route Madagascar</strong>,
+        une application Android conçue pour vous aider à apprendre,
+        réviser et tester vos connaissances du code de la route.
+    </p>
+
+
+    <!--
+        PLACE DU PROSPECTUS
+
+        Mets ton image dans le même dossier que index.html
+        et appelle-la :
+
+        prospectus.jpg
+    -->
+
+    <div class="prospectus">
+
+        <img
+            src="prospectus.jpg"
+            alt="Code de la Route Madagascar"
+        >
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     FONCTIONNALITES
+========================= -->
+
+<section class="card">
+
+    <div class="features">
+
+        <div class="feature">
+
+            <div class="feature-icon">
+                📚
+            </div>
+
+            <h3>
+                Cours
+            </h3>
+
+            <p>
+                Apprenez les règles essentielles
+                du code de la route.
+            </p>
+
+        </div>
+
+
+        <div class="feature">
+
+            <div class="feature-icon">
+                🚦
+            </div>
+
+            <h3>
+                Signalisation
+            </h3>
+
+            <p>
+                Découvrez les panneaux et
+                leur signification.
+            </p>
+
+        </div>
+
+
+        <div class="feature">
+
+            <div class="feature-icon">
+                📝
+            </div>
+
+            <h3>
+                Quiz
+            </h3>
+
+            <p>
+                Testez vos connaissances
+                avec des questions.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     TELECHARGEMENT
+========================= -->
+
+<section class="card download">
+
+    <h2>
+        📱 Télécharger l'application
+    </h2>
+
+    <p>
+        L'application est disponible gratuitement
+        au téléchargement pour Android.
+    </p>
+
+    <div class="badge">
+        VERSION ANDROID
+    </div>
+
+    <br>
+
+
+    <!--
+        IMPORTANT :
+
+        Le fichier APK doit être placé
+        dans le même dossier que index.html.
+
+        Nom du fichier :
+
+        CodeRouteMadagascar.apk
+    -->
+
+    <a
+        class="download-btn"
+        href="CodeRouteMadagascar.apk"
+        download
+    >
+
+        ⬇️ Télécharger l'APK
+
+    </a>
+
+
+    <div class="download-note">
+        Téléchargement gratuit • Android
+    </div>
+
+</section>
+
+
+<!-- =========================
+     PREMIUM
+========================= -->
+
+<section class="card premium">
+
+    <h2>
+        ⭐ Mode Premium
+    </h2>
+
+    <p>
+        L'application peut être téléchargée gratuitement.
+        Des fonctionnalités supplémentaires sont disponibles
+        directement dans l'application avec le mode Premium.
+    </p>
+
+</section>
+
+
+<!-- =========================
+     CONTACT
+========================= -->
+
+<section class="card contact">
+
+    <h2>
+        Besoin d'aide ?
+    </h2>
+
+    <p>
+        Pour toute question concernant l'application,
+        l'installation ou son utilisation, contactez-nous.
+    </p>
+
+</section>
+```
+
+</main>
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+```
+© 2026 Code de la Route Madagascar
+<br>
+Tous droits réservés.
+```
+
+</footer>
+
+</body>
+</html>
