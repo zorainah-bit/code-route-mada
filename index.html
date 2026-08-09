@@ -1,12 +1,9 @@
 <!DOCTYPE html>
-
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Code de la Route Madagascar</title>
-
 <meta name="description" content="Code de la Route Madagascar - Application Android pour apprendre et réviser le code de la route.">
 
 <style>
@@ -54,6 +51,31 @@ header {
     margin-top: 7px;
     font-size: clamp(14px, 3vw, 18px);
     opacity: 0.92;
+}
+
+/* =========================
+   HERO DOWNLOAD (juste sous la bannière)
+========================= */
+
+.hero-download {
+    text-align: center;
+    padding: 22px 20px 30px;
+    background: linear-gradient(135deg, #103d68, #1976b9);
+}
+
+.hero-download .download-btn {
+    background: #ffffff;
+    color: var(--blue-dark);
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.25);
+}
+
+.hero-download .download-btn:hover {
+    background: var(--blue-light);
+    color: var(--blue-dark);
+}
+
+.hero-download .download-note {
+    color: rgba(255, 255, 255, 0.85);
 }
 
 /* =========================
@@ -133,6 +155,12 @@ header {
     border-radius: 16px;
     padding: 22px 17px;
     text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.feature:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
 }
 
 .feature-icon {
@@ -277,7 +305,6 @@ footer {
 ========================= */
 
 @media (max-width: 850px) {
-
     .features {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -291,6 +318,10 @@ footer {
 
     header {
         padding: 22px 15px;
+    }
+
+    .hero-download {
+        padding: 18px 15px 24px;
     }
 
     .container {
@@ -327,169 +358,39 @@ footer {
 ========================= -->
 
 <header>
+    <div class="logo">
+        🚘 CRM
+    </div>
 
-```
-<div class="logo">
-    🚘 CRM
-</div>
-
-<div class="subtitle">
-    Code de la Route Madagascar
-</div>
-```
-
+    <div class="subtitle">
+        Code de la Route Madagascar
+    </div>
 </header>
 
-<main class="container">
-
-```
 <!-- =========================
-     PRESENTATION
+     BOUTON DE TELECHARGEMENT (juste après la bannière)
 ========================= -->
 
-<section class="card intro">
+<!--
+    IMPORTANT :
 
-    <h1>
-        Apprenez le Code de la Route 🇲🇬
-    </h1>
+    Le fichier APK doit être placé
+    dans le même dossier que index.html.
 
-    <p>
-        Découvrez <strong>Code de la Route Madagascar</strong>,
-        une application Android conçue pour vous aider à apprendre,
-        réviser et tester vos connaissances du code de la route.
-    </p>
+    Nom du fichier :
 
+    CodeRouteMadagascar.apk
+-->
 
-    <!--
-        PLACE DU PROSPECTUS
-
-        Mets ton image dans le même dossier que index.html
-        et appelle-la :
-
-        prospectus.jpg
-    -->
-
-    <div class="prospectus">
-
-        <img
-            src="prospectus.jpg"
-            alt="Code de la Route Madagascar"
-        >
-
-    </div>
-
-</section>
-
-
-<!-- =========================
-     FONCTIONNALITES
-========================= -->
-
-<section class="card">
-
-    <div class="features">
-
-        <div class="feature">
-
-            <div class="feature-icon">
-                📚
-            </div>
-
-            <h3>
-                Cours
-            </h3>
-
-            <p>
-                Apprenez les règles essentielles
-                du code de la route.
-            </p>
-
-        </div>
-
-
-        <div class="feature">
-
-            <div class="feature-icon">
-                🚦
-            </div>
-
-            <h3>
-                Signalisation
-            </h3>
-
-            <p>
-                Découvrez les panneaux et
-                leur signification.
-            </p>
-
-        </div>
-
-
-        <div class="feature">
-
-            <div class="feature-icon">
-                📝
-            </div>
-
-            <h3>
-                Quiz
-            </h3>
-
-            <p>
-                Testez vos connaissances
-                avec des questions.
-            </p>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =========================
-     TELECHARGEMENT
-========================= -->
-
-<section class="card download">
-
-    <h2>
-        📱 Télécharger l'application
-    </h2>
-
-    <p>
-        L'application est disponible gratuitement
-        au téléchargement pour Android.
-    </p>
-
-    <div class="badge">
-        VERSION ANDROID
-    </div>
-
-    <br>
-
-
-    <!--
-        IMPORTANT :
-
-        Le fichier APK doit être placé
-        dans le même dossier que index.html.
-
-        Nom du fichier :
-
-        CodeRouteMadagascar.apk
-    -->
+<section class="hero-download">
 
     <a
         class="download-btn"
         href="CodeRouteMadagascar.apk"
         download
     >
-
         ⬇️ Télécharger l'APK
-
     </a>
-
 
     <div class="download-note">
         Téléchargement gratuit • Android
@@ -497,43 +398,158 @@ footer {
 
 </section>
 
+<main class="container">
 
-<!-- =========================
-     PREMIUM
-========================= -->
+    <!-- =========================
+         PRESENTATION
+    ========================= -->
 
-<section class="card premium">
+    <section class="card intro">
 
-    <h2>
-        ⭐ Mode Premium
-    </h2>
+        <h1>
+            Maîtrisez le Code de la Route Malgache, où que vous soyez 🇲🇬
+        </h1>
 
-    <p>
-        L'application peut être téléchargée gratuitement.
-        Des fonctionnalités supplémentaires sont disponibles
-        directement dans l'application avec le mode Premium.
-    </p>
-
-</section>
+        <p>
+            Découvrez <strong>Code de la Route Madagascar</strong>,
+            l'application Android qui vous accompagne pour apprendre,
+            réviser et réussir votre code de la route, à votre rythme.
+        </p>
 
 
-<!-- =========================
-     CONTACT
-========================= -->
+        <!--
+            PLACE DU PROSPECTUS
 
-<section class="card contact">
+            Mets ton image dans le même dossier que index.html
+            et appelle-la :
 
-    <h2>
-        Besoin d'aide ?
-    </h2>
+            prospectus.jpg
+        -->
 
-    <p>
-        Pour toute question concernant l'application,
-        l'installation ou son utilisation, contactez-nous.
-    </p>
+        <div class="prospectus">
+            <img
+                src="prospectus.jpg"
+                alt="Code de la Route Madagascar"
+            >
+        </div>
 
-</section>
-```
+    </section>
+
+
+    <!-- =========================
+         FONCTIONNALITES
+    ========================= -->
+
+    <section class="card">
+
+        <div class="features">
+
+            <div class="feature">
+                <div class="feature-icon">📚</div>
+                <h3>Cours</h3>
+                <p>
+                    Apprenez les règles essentielles
+                    du code de la route.
+                </p>
+            </div>
+
+            <div class="feature">
+                <div class="feature-icon">🚦</div>
+                <h3>Signalisation</h3>
+                <p>
+                    Découvrez les panneaux et
+                    leur signification.
+                </p>
+            </div>
+
+            <div class="feature">
+                <div class="feature-icon">📝</div>
+                <h3>Quiz</h3>
+                <p>
+                    Testez vos connaissances
+                    avec des questions.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         TELECHARGEMENT
+    ========================= -->
+
+    <section class="card download">
+
+        <h2>📱 Télécharger l'application</h2>
+
+        <p>
+            L'application est disponible gratuitement
+            au téléchargement pour Android.
+        </p>
+
+        <div class="badge">VERSION ANDROID</div>
+
+        <br>
+
+        <!--
+            IMPORTANT :
+
+            Le fichier APK doit être placé
+            dans le même dossier que index.html.
+
+            Nom du fichier :
+
+            CodeRouteMadagascar.apk
+        -->
+
+        <a
+            class="download-btn"
+            href="CodeRouteMadagascar.apk"
+            download
+        >
+            ⬇️ Télécharger l'APK
+        </a>
+
+        <div class="download-note">
+            Téléchargement gratuit • Android
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         PREMIUM
+    ========================= -->
+
+    <section class="card premium">
+
+        <h2>⭐ Mode Premium</h2>
+
+        <p>
+            L'application peut être téléchargée gratuitement.
+            Des fonctionnalités supplémentaires sont disponibles
+            directement dans l'application avec le mode Premium.
+        </p>
+
+    </section>
+
+
+    <!-- =========================
+         CONTACT
+    ========================= -->
+
+    <section class="card contact">
+
+        <h2>Besoin d'aide ?</h2>
+
+        <p>
+            Pour toute question concernant l'application,
+            l'installation ou son utilisation, contactez-nous.
+        </p>
+
+    </section>
 
 </main>
 
@@ -542,13 +558,9 @@ footer {
 ========================= -->
 
 <footer>
-
-```
-© 2026 Code de la Route Madagascar
-<br>
-Tous droits réservés.
-```
-
+    © 2026 Code de la Route Madagascar
+    <br>
+    Tous droits réservés.
 </footer>
 
 </body>
